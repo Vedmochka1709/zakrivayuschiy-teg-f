@@ -29,7 +29,7 @@
   padding-block-end: 20px;
 }
 
-.logo { 
+.logo {
   padding-block-end: 20px;
   font-size: clamp(3.0625rem, 2.7104rem + 1.5023vw, 4.0625rem); /*49-65*/
   text-decoration: none;
@@ -102,7 +102,7 @@
   background-color: var(--card-color);
 }
 
-.section__tittle { 
+.section__tittle {
   font-variation-settings: var(--weight-tittle), 700;
   font-size: 18px;
   padding: 5px 10px;
@@ -152,7 +152,7 @@
 }
 
 .section__text p {
-  line-height: 117%; 
+  line-height: 117%;
   font-size: 18px;
   padding-inline-end: 15px;
 }
@@ -168,8 +168,7 @@
   border: 2px solid transparent;
   background-color: transparent;
   display: flex;
-  transition: border 0.3s ease;
-  transition: fill 0.3s ease;
+  transition: border 0.3s ease, fill 0.3s ease;
 }
 
 .card__icon-button:focus-visible {
@@ -217,12 +216,12 @@
 }
 
 .card__like-button:hover::after,
-.footer__button:hover::after { 
+.footer__button:hover::after {
   inline-size: 100%;
 }
 
 .card__like-button:hover .button__text,
-.footer__button:hover .button__text{
+.footer__button:hover .button__text {
   color: var(--like-color);
   position: relative;
   z-index: 5;
@@ -230,7 +229,7 @@
 }
 
 .footer__button:hover .footer__icon-button {
-  stroke: var(--like-color); 
+  stroke: var(--like-color);
   position: relative;
   z-index: 6;
   mix-blend-mode: difference;
@@ -244,7 +243,7 @@
 /*подвал - кнопка*/
 .footer {
   padding-block-start: 50px;
-  padding-block-end: 100px;  
+  padding-block-end: 100px;
 }
 
 .footer__button {
@@ -256,7 +255,7 @@
 }
 
 .footer__icon-button {
-  inline-size: 28px; 
+  inline-size: 28px;
 }
 
 .footer__text {
@@ -333,7 +332,7 @@
   }
 
   .footer__icon-button {
-    inline-size: 21px;   
+    inline-size: 21px;
   }
 
   .dialog {
