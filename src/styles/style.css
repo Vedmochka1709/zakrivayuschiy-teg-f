@@ -1,19 +1,4 @@
-/* Здесь вы напишете основную часть стилей страницы.
-
-Будьте внимательны! Для корректной работы скриптов на этом сайте нужно, чтобы в HTML некоторые классы были названы особым образом:
-✦ like-icon — для svg-иконки анимированного сердца
-✦ card__like-button — для кнопки Like рядом с иконкой
-✦ card__icon-button — для кнопки, оборачивающей иконку
-✦ card__icon-button — для кнопки, оборачивающей иконку
-✦ is-liked — для обозначения состояния лайкнутой иконки в виде сердца
-✦ button__text — для обозначения текстового элемента внутри кнопки
-
-Кроме этого, не меняйте HTML переключателя тем. Его разметка также гарантирует работу своего скрипта.
-
-*/
-
 .page {
-  /*background-image: url("../svg/background.svg");  временно */
   color: var(--accent-color);
   display: flex;
   flex-direction: column;
@@ -117,7 +102,7 @@
   background-color: var(--card-color);
 }
 
-.section__tittle { /*Что-то с текстом*/
+.section__tittle { 
   font-variation-settings: var(--weight-tittle), 700;
   font-size: 18px;
   padding: 5px 10px;
@@ -251,6 +236,11 @@
   mix-blend-mode: difference;
 }
 
+.quote {
+  font-style: italic;
+  font-size: 18px;
+}
+
 /*подвал - кнопка*/
 .footer {
   padding-block-start: 50px;
@@ -293,7 +283,7 @@
   gap: 30px;
   position: fixed;
   inset: 0;
-  transition: opacity 0.5s ease-in-out;
+  transition: opacity 0.3s linear;
 }
 
 .dialog::backdrop {
@@ -346,7 +336,35 @@
     inline-size: 21px;   
   }
 
-  .dialog/*:opened*/ {
+  .dialog {
     padding: 30px;
   }
+}
+/*Фильтры*/
+.filter_sprout {
+  filter: brightness(70%) contrast(150%);
+}
+
+.filter_mistake {
+  filter: brightness(70%) blur(1.2px) contrast(130%);
+}
+
+.filter_mountain {
+	filter: brightness(70%) contrast(200%);
+}
+
+.filter_team {
+  filter: brightness(70%) sepia(100%) contrast(250%);
+}
+
+.filter_battery {
+  filter: brightness(70%) hue-rotate(245deg) saturate(300%);
+}
+
+.filter_time-management {
+  filter: brightness(70%) grayscale(70%);
+}
+
+.filter_way {
+  filter: brightness(70%);
 }
