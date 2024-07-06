@@ -10,7 +10,7 @@
 
 body {
   font-family: "Inter-Variable", "Inter", sans-serif;
-  font-variation-settings: "wght" var(--weight-text), 400;
+  font-variation-settings: var(--weight-text), 400;
   margin: 0 auto;
   min-inline-size: 320px;
   min-block-size: 100dvb;
@@ -54,4 +54,12 @@ ol {
   clip: rect(0 0 0 0);
   clip-path: inset(50%);
   white-space: nowrap;
+}
+
+button:focus {
+  outline: none;
+}
+
+button {
+  cursor: pointer;
 }

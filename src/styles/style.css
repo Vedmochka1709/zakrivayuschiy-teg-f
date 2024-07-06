@@ -30,7 +30,7 @@
   font-weight: 700;
 }
 
-.white_zone {
+.card_zone {
   background-color: var(--card-color);
   border: 2px solid var(--accent-color);
   display: flex;
@@ -44,12 +44,13 @@
   padding-block-end: 20px;
 }
 
-.header__tittle { 
+.logo { 
   padding-block-end: 20px;
   font-size: clamp(3.0625rem, 2.7104rem + 1.5023vw, 4.0625rem); /*49-65*/
+  text-decoration: none;
 }
 
-.header__text {
+.header__tittle {
   text-transform: uppercase;
   font-size: clamp(0.875rem, 0.6769rem + 0.8451vw, 1.4375rem); /*14-23*/
   padding-block-end: 25px;
@@ -58,11 +59,11 @@
 .theme-menu__list {
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 8px;
   min-width: 104px;
   padding-inline-start: 24px;
 }
-/* Настроить наводки*/
+
 .theme-menu__button {
   font-size: 14px;
   text-transform: uppercase;
@@ -71,17 +72,12 @@
   font-family: "PressStart2P", fantasy;
   font-weight: 400;
   position: relative;
-  cursor: pointer;
   transition: opacity 0.3s ease;
 }
 
 .theme-menu__button:hover,
 .theme-menu__button:disabled {
   opacity: 0.6;
-}
-
-.theme-menu__button:focus {
-  outline: none;
 }
 
 .theme-menu__button::after {
@@ -107,7 +103,6 @@
   content: "▶";
   position: absolute;
   inset-inline-start: -16px;
-  /*animation: arrow 0.5s ease-in-out infinite alternate;*/
 }
 /* Контент*/
 .content {
@@ -124,8 +119,8 @@
 
 .section__tittle { /*Что-то с текстом*/
   font-variation-settings: var(--weight-tittle), 700;
-  font-size: 18x;
-  padding-inline-start: 10px;
+  font-size: 18px;
+  padding: 5px 10px;
 }
 
 .block_image {
@@ -141,12 +136,12 @@
   font-weight: 400;
   font-size: 14px;
   text-transform: uppercase;
-  color: var(--color-label);
+  color: var(--accent-color);
   mix-blend-mode: hard-light;
   opacity: 0.5;
   text-shadow:  0 0 1px 1px var(--shadow-label);
 }
-/*не передаёт цвет лейбла в тёмной теме*/
+
 @supports((text-stroke: 1px #FFFFFF) or (-webkit-text-stroke: 1px #FFFFFF)) {
   .label {
     -webkit-text-stroke: 1px var(--shadow-label);
@@ -158,13 +153,11 @@
 .image {
   display: block;
   inline-size: 100%;
-  block-size: 100%;
+  block-size: 375px;
   object-fit: cover;
   border-block-start: 2px solid var(--accent-color);
   border-block-end: 2px solid var(--accent-color);
 }
-
-
 
 .section__text {
   display: flex;
@@ -174,7 +167,7 @@
 }
 
 .section__text p {
-  line-height: 117%; /*работает?*/
+  line-height: 117%; 
   font-size: 18px;
   padding-inline-end: 15px;
 }
@@ -184,16 +177,28 @@
   justify-content: end;
   padding: 0 25px 25px;
   gap: 6px;
-  align-items: center; /*???*/
 }
-
+/*сердце*/
 .card__icon-button {
-  border: 1px solid transparent;
-  background: transparent;
+  border: 2px solid transparent;
+  background-color: transparent;
+  display: flex;
+  transition: border 0.3s ease;
+  transition: fill 0.3s ease;
 }
 
-.like-icon {  /* Нужно анимировать*/
+.card__icon-button:focus-visible {
+  border: 2px solid var(--accent-color);
+}
+
+.like-icon {
+  align-self: center;
+  inline-size: 27px;
   block-size: 24px;
+}
+
+.sparks {
+  opacity: 0;
 }
 
 .card__like-button {
@@ -205,22 +210,63 @@
   font-weight: 400;
   font-size: 14px;
   line-height: 90%;
+  transition: box-shadow 0.3s ease;
+  position: relative;
 }
 
+.card__like-button:focus-visible {
+  box-shadow: 2px 2px 0 var(--accent-color)
+}
+
+.card__like-button::after,
+.footer__button::after {
+  content: "";
+  display: block;
+  position: absolute;
+  inset-block-start: 0;
+  inset-inline-start: 0;
+  background-color: currentColor;
+  inline-size: 0;
+  transition: inline-size 0.5s ease-in-out;
+  block-size: 100%;
+}
+
+.card__like-button:hover::after,
+.footer__button:hover::after { 
+  inline-size: 100%;
+}
+
+.card__like-button:hover .button__text,
+.footer__button:hover .button__text{
+  color: var(--like-color);
+  position: relative;
+  z-index: 5;
+  mix-blend-mode: difference;
+}
+
+.footer__button:hover .footer__icon-button {
+  stroke: var(--like-color); 
+  position: relative;
+  z-index: 6;
+  mix-blend-mode: difference;
+}
+
+/*подвал - кнопка*/
 .footer {
   padding-block-start: 50px;
   padding-block-end: 100px;  
 }
 
-.footer__white_zone {
+.footer__button {
   inline-size: clamp(19.125rem, 18.4868rem + 2.723vw, 20.9375rem); /*306-335*/
   flex-direction: column;
   padding: 15px 15px;
   gap: 10px;
+  position: relative;
 }
 
 .footer__icon-button {
-  width: 28px; /*21px*/
+  inline-size: 28px; 
 }
 
 .footer__text {
@@ -229,13 +275,78 @@
   font-size: 14px;
   line-height: 90%;
 }
+/*Диалог*/
+.dialog:not([open]) {
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity;
+}
+.dialog {
+  background-color: var(--card-color);
+  border: 2px solid var(--accent-color);
+  display: flex;
+  align-items: center;
+  inline-size: clamp(21.3125rem, 20.9604rem + 1.5023vw, 22.3125rem);/*341-357*/
+  flex-direction: column;
+  padding: 30px 40px;
+  color: var(--accent-color);
+  gap: 30px;
+  position: fixed;
+  inset: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.dialog::backdrop {
+  background: #000;
+  opacity: 0.75;
+}
+
+.dialog__massage {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.dialog__icon {
+  flex-shrink: 0;
+  inline-size: 39px;
+}
+
+.dialog__text {
+  font-family: "PressStart2P", fantasy;
+  font-weight: 400;
+  font-size: 14px;
+  text-transform: uppercase;
+  line-height: 150%;
+}
+
+.form__dialog__button {
+  inline-size: 100%;
+}
+
+.dialog__button {
+  inline-size: 100%;
+  padding: 9px 17px;
+}
+
+.dialog__button__text {
+  line-height: 90%;
+  font-family: "PressStart2P", fantasy;
+  font-weight: 400;
+  font-size: 14px;
+  text-transform: uppercase;
+}
 
 @media (min-width: 1440px) {
-  .footer__white_zone {
+  .footer__button {
     flex-direction: row;
   }
 
   .footer__icon-button {
-    width: 21px;   
+    inline-size: 21px;   
+  }
+
+  .dialog/*:opened*/ {
+    padding: 30px;
   }
 }

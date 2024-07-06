@@ -20,8 +20,10 @@
       linear-gradient(
       #e7e7e7 0.01%, 
       #1a1a1a);
-    --color-label: #000;
     --shadow-label: #FFFFFF;
+    --like-color: #fff;
+    --heart-contour: var(--accent-color);
+    --heart-sparks: #FF0000;
 }
   
 @media (prefers-color-scheme: light) {
@@ -41,8 +43,10 @@
       linear-gradient(
       #e7e7e7 0.01%, 
       #1a1a1a);
-    --color-label: #000;
     --shadow-label: #FFFFFF;
+    --like-color: #fff;
+    --heart-contour: var(--accent-color);
+    --heart-sparks: #FF0000;
   }
 }
 
@@ -62,8 +66,10 @@
       linear-gradient(
       #007f0c, 
       #004306);
-    --color-label: #004306;
     --shadow-label: #000;
+    --like-color: var(--accent-color);
+    --heart-contour: var(--accent-color);
+    --heart-sparks: #FF0000;
 }
 
   
@@ -84,7 +90,9 @@
       linear-gradient(
       #007f0c, 
       #004306);
-    --color-label: #004306;
     --shadow-label: #000;
+    --like-color: var(--accent-color);
+    --heart-contour: var(--accent-color);
+    --heart-sparks: #FF0000;
     }
 }

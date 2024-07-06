@@ -14,8 +14,10 @@
       linear-gradient(
       #e7e7e7 0.01%, 
       #1a1a1a);
-    --color-label: #000;
     --shadow-label: #FFFFFF;
+    --like-color: #fff;
+    --heart-contour: var(--accent-color);
+    --heart-sparks: #FF0000;
   }
 
   /*Ещё меняются цвета анимированных элементов и паттерны фона*/
