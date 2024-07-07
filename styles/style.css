@@ -103,7 +103,7 @@
 }
 
 .section__tittle {
-  font-variation-settings: var(--weight-tittle), 700;
+  font-variation-settings: "wght" var(--weight-tittle), 700;
   font-size: 18px;
   padding: 5px 10px;
 }
