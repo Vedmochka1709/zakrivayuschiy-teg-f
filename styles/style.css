@@ -254,6 +254,10 @@
   position: relative;
 }
 
+.footer__button:focus-visible {
+  box-shadow: 2px 2px 0 var(--accent-color);
+}
+
 .footer__icon-button {
   inline-size: 28px;
 }
