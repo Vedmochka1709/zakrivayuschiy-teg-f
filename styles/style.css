@@ -22,7 +22,7 @@
   align-items: center;
 }
 
-.header__white_zone {
+.header__card_zone {
   inline-size: clamp(23.4375rem, 16.2852rem + 30.5164vw, 43.75rem); /*375-700*/
   flex-direction: column;
   padding-block-start: clamp(7.5rem, 7.1479rem + 1.5023vw, 8.5rem); /*120-136*/
@@ -35,7 +35,7 @@
   text-decoration: none;
 }
 
-.header__tittle {
+.header__title {
   text-transform: uppercase;
   font-size: clamp(0.875rem, 0.6769rem + 0.8451vw, 1.4375rem); /*14-23*/
   padding-block-end: 25px;
@@ -44,15 +44,15 @@
 .theme-menu__list {
   display: flex;
   flex-direction: column;
-  gap: 8px;
-  min-width: 104px;
+  gap: 9px;
+  min-inline-size: 104px;
   padding-inline-start: 24px;
 }
 
 .theme-menu__button {
   font-size: 14px;
   text-transform: uppercase;
-  border: 1px solid transparent;
+  border: none;
   background-color: transparent;
   font-family: "PressStart2P", fantasy;
   font-weight: 400;
@@ -88,6 +88,7 @@
   content: "▶";
   position: absolute;
   inset-inline-start: -16px;
+  animation: translate 0.5s ease-in-out infinite alternate;
 }
 /* Контент*/
 .content {
@@ -102,14 +103,16 @@
   background-color: var(--card-color);
 }
 
-.section__tittle {
-  font-variation-settings: "wght" var(--weight-tittle), 700;
+.section__title {
+  font-variation-settings: "wght" var(--weight-tittle);
   font-size: 18px;
   padding: 5px 10px;
+  border-block-end: 2px solid var(--accent-color);
 }
 
 .block_image {
   position: relative;
+  aspect-ratio: 1/1;
 }
 
 .label {
@@ -138,10 +141,8 @@
 .image {
   display: block;
   inline-size: 100%;
-  block-size: 375px;
+  block-size: 100%;
   object-fit: cover;
-  border-block-start: 2px solid var(--accent-color);
-  border-block-end: 2px solid var(--accent-color);
 }
 
 .section__text {
@@ -149,6 +150,7 @@
   flex-direction: column;
   gap: 27px;
   padding: 25px;
+  border-block-start: 2px solid var(--accent-color);
 }
 
 .section__text p {
@@ -161,7 +163,6 @@
   display: flex;
   justify-content: end;
   padding: 0 25px 25px;
-  gap: 6px;
 }
 /*сердце*/
 .card__icon-button {
@@ -169,6 +170,7 @@
   background-color: transparent;
   display: flex;
   transition: border 0.3s ease, fill 0.3s ease;
+  block-size: 38px;
 }
 
 .card__icon-button:focus-visible {
@@ -177,8 +179,8 @@
 
 .like-icon {
   align-self: center;
-  inline-size: 27px;
-  block-size: 24px;
+  inline-size: 39px;
+  block-size: 36px;
 }
 
 .sparks {
@@ -203,7 +205,7 @@
 }
 
 .card__like-button::after,
-.footer__button::after {
+.save__button::after {
   content: "";
   display: block;
   position: absolute;
@@ -216,37 +218,32 @@
 }
 
 .card__like-button:hover::after,
-.footer__button:hover::after {
+.save__button:hover::after {
   inline-size: 100%;
 }
 
 .card__like-button:hover .button__text,
-.footer__button:hover .button__text {
+.save__button:hover .save__text,
+.save__button:hover .save__icon-button {
   color: var(--like-color);
   position: relative;
   z-index: 5;
   mix-blend-mode: difference;
 }
 
-.footer__button:hover .footer__icon-button {
+.save__button:hover .footer__icon-button {
   stroke: var(--like-color);
   position: relative;
   z-index: 6;
   mix-blend-mode: difference;
 }
-
-.quote {
-  font-style: italic;
-  font-size: 18px;
-}
-
 /*подвал - кнопка*/
-.footer {
+.save {
   padding-block-start: 50px;
   padding-block-end: 100px;
 }
 
-.footer__button {
+.save__button {
   inline-size: clamp(19.125rem, 18.4868rem + 2.723vw, 20.9375rem); /*306-335*/
   flex-direction: column;
   padding: 15px 15px;
@@ -254,15 +251,15 @@
   position: relative;
 }
 
-.footer__button:focus-visible {
+.save__button:focus-visible {
   box-shadow: 2px 2px 0 var(--accent-color);
 }
 
-.footer__icon-button {
+.save__icon-button {
   inline-size: 28px;
 }
 
-.footer__text {
+.save__text {
   font-family: "PressStart2P", fantasy;
   font-weight: 400;
   font-size: 14px;
@@ -279,12 +276,12 @@
   border: 2px solid var(--accent-color);
   display: flex;
   align-items: center;
+  justify-content: center;
   inline-size: clamp(21.3125rem, 20.9604rem + 1.5023vw, 22.3125rem);/*341-357*/
   flex-direction: column;
   padding: 30px 40px;
   color: var(--accent-color);
   gap: 30px;
-  position: fixed;
   inset: 0;
   transition: opacity 0.3s linear;
 }
@@ -353,7 +350,7 @@
 }
 
 .filter_mountain {
-	filter: brightness(70%) contrast(200%);
+  filter: brightness(70%) contrast(200%);
 }
 
 .filter_team {

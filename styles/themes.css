@@ -20,8 +20,8 @@
       linear-gradient(
       #e7e7e7 0.01%, 
       #1a1a1a);
-    --shadow-label: #FFFFFF;
-    --like-color: #fff;
+    --shadow-label: var(--card-color);
+    --like-color: var(--card-color);
     --heart-contour: var(--accent-color);
     --heart-sparks: #FF0000;
 }
@@ -43,8 +43,8 @@
       linear-gradient(
       #e7e7e7 0.01%, 
       #1a1a1a);
-    --shadow-label: #FFFFFF;
-    --like-color: #fff;
+    --shadow-label: var(--card-color);
+    --like-color: var(--card-color);
     --heart-contour: var(--accent-color);
     --heart-sparks: #FF0000;
   }
@@ -66,7 +66,7 @@
       linear-gradient(
       #007f0c, 
       #004306);
-    --shadow-label: #000;
+    --shadow-label: var(--card-color);
     --like-color: var(--accent-color);
     --heart-contour: var(--accent-color);
     --heart-sparks: #FF0000;
@@ -90,7 +90,7 @@
       linear-gradient(
       #007f0c, 
       #004306);
-    --shadow-label: #000;
+    --shadow-label: var(--card-color);
     --like-color: var(--accent-color);
     --heart-contour: var(--accent-color);
     --heart-sparks: #FF0000;

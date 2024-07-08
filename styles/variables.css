@@ -14,8 +14,8 @@
       linear-gradient(
       #e7e7e7 0.01%, 
       #1a1a1a);
-    --shadow-label: #FFFFFF;
-    --like-color: #fff;
+    --shadow-label: var(--card-color);
+    --like-color: var(--card-color);
     --heart-contour: var(--accent-color);
     --heart-sparks: #FF0000;
   }

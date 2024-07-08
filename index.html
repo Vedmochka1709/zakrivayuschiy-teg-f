@@ -6,19 +6,21 @@
     <meta name="color-scheme" content="light dark">
     <title>Закрывающий тег</title>
     <link rel="stylesheet" href="./fonts/fonts.css" />
-    <link rel="stylesheet" href="./styles/variables.css" />
     <link rel="stylesheet" href="./styles/globals.css" />
+    <link rel="stylesheet" href="./styles/variables.css" />
     <link rel="stylesheet" href="./styles/style.css" />
     <link rel="stylesheet" href="./styles/animations.css" />
     <link rel="stylesheet" href="./styles/themes.css" />
     <link rel="icon" href="./images/favicon.ico">
+    <link rel="shortcut icon" href="./svg/favicon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="./images/favicon.png" />
     <script src="./scripts/set-theme.js"></script>
   </head>
   <body class="page">
     <header class="header">
-      <div class="card_zone header__white_zone">
+      <div class="card_zone header__card_zone">
         <a href="#0" class="logo">&lt;/HTML&gt;</a>
-        <h1 class="header__tittle">закрывающий тег</h1>
+        <h1 class="header__title">закрывающий тег</h1>
       <nav class="theme-menu header__theme-menu">
         <!-- Не меняйте разметку этого списка, иначе скрипты перестанут работать -->
         <ul class="theme-menu__list">
@@ -48,12 +50,12 @@
     </header>
     <main class="content">
       <section class="section">
-        <h2 class="section__tittle">
+        <h2 class="section__title">
           Фритрек и нулевой спринт: Подготовка к работе
         </h2>
         <div class="block_image">
           <p class="label">New world</p>
-          <img class="image" src="./images/open.jpg" alt="Слово open подсвечивается"> 
+          <img class="image" src="./images/open.jpg" alt="Слово open подсвечивается" loading=”lazy”> 
         </div>
         <div class="section__text">
           <p>Это было самое начало пути. На этом этапе важно 
@@ -68,14 +70,15 @@
           </p>
         </div>
         <div class="like">
-          <button type="button" class="card__icon-button">
+          <button type="button" class="card__icon-button" aria-label="Поставить лайк через сердечко">
             <svg 
               xmlns="http://www.w3.org/2000/svg" 
-              width="27" 
-              height="24" 
+              width="39" 
+              height="36" 
               fill="none"
               class="like-icon"
-              viewBox="0 0 34 30">
+              viewBox="0 0 39 36"
+              aria-hidden="true">
               <g class="heart">
                 <path class="contour" fill="var(--heart-contour)" d="M12 6H9V9H12V6ZM15 6H12V9H15V6ZM9 9H6V12H9V9ZM9 12H6V15H9V12ZM9 
                 15H6V18H9V15ZM18 6H15V9H18V6ZM12 18H9V21H12V18ZM15 21H12V24H15V21ZM18 
@@ -96,18 +99,18 @@
                 0H15V3H12V0ZM0 13H3V16H0V13Z"/>
                 </svg>   
           </button>
-          <button type="button" class="card__like-button">
+          <button type="button" class="card__like-button" aria-label="Поставить лайк, нажав на кнопку">
             <span class="button__text">Like</span>
           </button>
         </div>
       </section>
       <section class="section">
-        <h2 class="section__tittle">
+        <h2 class="section__title">
           1 спринт: Я — чистый лист
         </h2>
         <div class="block_image">
           <p class="label">Новые знания</p>
-          <img class="image filter_sprout" src="./images/sprout.jpg" alt="Росток в вазе"> 
+          <img class="image filter_sprout" src="./images/sprout.jpg" alt="Росток в вазе" loading=”lazy”> 
         </div>
         <div class="section__text">
           <p>На первых этапах мы работали со страхами и 
@@ -125,14 +128,15 @@
           </p>
         </div>
         <div class="like">
-          <button type="button" class="card__icon-button">
+          <button type="button" class="card__icon-button" aria-label="Поставить лайк через сердечко">
             <svg 
               xmlns="http://www.w3.org/2000/svg" 
-              width="27" 
-              height="24" 
+              width="39" 
+              height="36" 
               fill="none"
               class="like-icon"
-              viewBox="0 0 34 30">
+              viewBox="0 0 39 36"
+              aria-hidden="true">
               <g class="heart">
                 <path class="contour" fill="var(--heart-contour)" d="M12 6H9V9H12V6ZM15 6H12V9H15V6ZM9 9H6V12H9V9ZM9 12H6V15H9V12ZM9 
                 15H6V18H9V15ZM18 6H15V9H18V6ZM12 18H9V21H12V18ZM15 21H12V24H15V21ZM18 
@@ -153,18 +157,18 @@
                 0H15V3H12V0ZM0 13H3V16H0V13Z"/>
                 </svg>   
           </button>
-          <button type="button" class="card__like-button">
+          <button type="button" class="card__like-button" aria-label="Поставить лайк, нажав на кнопку">
             <span class="button__text">Like</span>
           </button>
         </div>
       </section>
       <section class="section">
-        <h2 class="section__tittle">
+        <h2 class="section__title">
           1 спринт: А если не получится?
         </h2>
         <div class="block_image">
           <p class="label">Первые ошибки</p>
-          <img class="image filter_mistake" src="./images/mistake.avif" alt="мужчина с выпученными глазами"> 
+          <img class="image filter_mistake" src="./images/mistake.avif" alt="мужчина с выпученными глазами" loading=”lazy”> 
         </div>
         <div class="section__text">
           <p>Первый проект — позади! Но это всё ещё самое 
@@ -179,14 +183,15 @@
           </p>
         </div>
         <div class="like">
-          <button type="button" class="card__icon-button">
+          <button type="button" class="card__icon-button" aria-label="Поставить лайк через сердечко">
             <svg 
               xmlns="http://www.w3.org/2000/svg" 
-              width="27" 
-              height="24" 
+              width="39" 
+              height="36" 
               fill="none"
               class="like-icon"
-              viewBox="0 0 34 30">
+              viewBox="0 0 39 36"
+              aria-hidden="true">
               <g class="heart">
                 <path class="contour" fill="var(--heart-contour)" d="M12 6H9V9H12V6ZM15 6H12V9H15V6ZM9 9H6V12H9V9ZM9 12H6V15H9V12ZM9 
                 15H6V18H9V15ZM18 6H15V9H18V6ZM12 18H9V21H12V18ZM15 21H12V24H15V21ZM18 
@@ -207,18 +212,18 @@
                 0H15V3H12V0ZM0 13H3V16H0V13Z"/>
                 </svg>   
           </button>
-          <button type="button" class="card__like-button">
+          <button type="button" class="card__like-button" aria-label="Поставить лайк, нажав на кнопку">
             <span class="button__text">Like</span>
           </button>
         </div>
       </section>
       <section class="section">
-        <h2 class="section__tittle">
+        <h2 class="section__title">
           2 спринт: Погоня за идеалом
         </h2>
         <div class="block_image">
           <p class="label">Мотивация</p>
-          <img class="image filter_mountain" src="./images/mountain.jpg" alt="Взглят на гору перед её покорением"> 
+          <img class="image filter_mountain" src="./images/mountain.jpg" alt="Взглят на гору перед её покорением" loading=”lazy”> 
         </div>
         <div class="section__text">
           <p>На этом этапе вы уже достаточно разбирались 
@@ -237,14 +242,15 @@
           </p>
         </div>
         <div class="like">
-          <button type="button" class="card__icon-button">
+          <button type="button" class="card__icon-button" aria-label="Поставить лайк через сердечко">
             <svg 
               xmlns="http://www.w3.org/2000/svg" 
-              width="27" 
-              height="24" 
+              width="39" 
+              height="36" 
               fill="none"
               class="like-icon"
-              viewBox="0 0 34 30">
+              viewBox="0 0 39 36"
+              aria-hidden="true">
               <g class="heart">
                 <path class="contour" fill="var(--heart-contour)" d="M12 6H9V9H12V6ZM15 6H12V9H15V6ZM9 9H6V12H9V9ZM9 12H6V15H9V12ZM9 
                 15H6V18H9V15ZM18 6H15V9H18V6ZM12 18H9V21H12V18ZM15 21H12V24H15V21ZM18 
@@ -265,18 +271,18 @@
                 0H15V3H12V0ZM0 13H3V16H0V13Z"/>
                 </svg>   
           </button>
-          <button type="button" class="card__like-button">
+          <button type="button" class="card__like-button" aria-label="Поставить лайк, нажав на кнопку">
             <span class="button__text">Like</span>
           </button>
         </div>
       </section>
       <section class="section">
-        <h2 class="section__tittle">
+        <h2 class="section__title">
           2 спринт: О тех, кто рядом
         </h2>
         <div class="block_image">
           <p class="label">Команда</p>
-          <img class="image filter_team" src="./images/team.jpg" alt="Командная поддержка друг друга"> 
+          <img class="image filter_team" src="./images/team.jpg" alt="Командная поддержка друг друга" loading=”lazy”> 
         </div>
         <div class="section__text">
           <p>
@@ -303,14 +309,15 @@
           </p>
         </div>
         <div class="like">
-          <button type="button" class="card__icon-button">
+          <button type="button" class="card__icon-button" aria-label="Поставить лайк через сердечко">
             <svg 
               xmlns="http://www.w3.org/2000/svg" 
-              width="27" 
-              height="24" 
+              width="39" 
+              height="36" 
               fill="none"
               class="like-icon"
-              viewBox="0 0 34 30">
+              viewBox="0 0 39 36"
+              aria-hidden="true">
               <g class="heart">
                 <path class="contour" fill="var(--heart-contour)" d="M12 6H9V9H12V6ZM15 6H12V9H15V6ZM9 9H6V12H9V9ZM9 12H6V15H9V12ZM9 
                 15H6V18H9V15ZM18 6H15V9H18V6ZM12 18H9V21H12V18ZM15 21H12V24H15V21ZM18 
@@ -331,18 +338,18 @@
                 0H15V3H12V0ZM0 13H3V16H0V13Z"/>
                 </svg>   
           </button>
-          <button type="button" class="card__like-button">
+          <button type="button" class="card__like-button" aria-label="Поставить лайк, нажав на кнопку">
             <span class="button__text">Like</span>
           </button>
         </div>
       </section>
       <section class="section">
-        <h2 class="section__tittle">
+        <h2 class="section__title">
           3 спринт: Обходные стратегии
         </h2>
         <div class="block_image">
           <p class="label">В бой</p>
-          <img class="image filter_battery" src="./images/battery.avif" alt="Батарейка, заряженная на максимум"> 
+          <img class="image filter_battery" src="./images/battery.avif" alt="Батарейка, заряженная на максимум" loading=”lazy”> 
         </div>
         <div class="section__text">
           <p>
@@ -359,14 +366,15 @@
           </p>
         </div>
         <div class="like">
-          <button type="button" class="card__icon-button">
+          <button type="button" class="card__icon-button" aria-label="Поставить лайк через сердечко">
             <svg 
               xmlns="http://www.w3.org/2000/svg" 
-              width="27" 
-              height="24" 
+              width="39" 
+              height="36" 
               fill="none"
               class="like-icon"
-              viewBox="0 0 34 30">
+              viewBox="0 0 39 36"
+              aria-hidden="true">
               <g class="heart">
                 <path class="contour" fill="var(--heart-contour)" d="M12 6H9V9H12V6ZM15 6H12V9H15V6ZM9 9H6V12H9V9ZM9 12H6V15H9V12ZM9 
                 15H6V18H9V15ZM18 6H15V9H18V6ZM12 18H9V21H12V18ZM15 21H12V24H15V21ZM18 
@@ -387,18 +395,18 @@
                 0H15V3H12V0ZM0 13H3V16H0V13Z"/>
                 </svg>   
           </button>
-          <button type="button" class="card__like-button">
+          <button type="button" class="card__like-button" aria-label="Поставить лайк, нажав на кнопку">
             <span class="button__text">Like</span>
           </button>
         </div>
       </section>
       <section class="section">
-        <h2 class="section__tittle">
+        <h2 class="section__title">
           3 спринт: Когда опускаются руки
         </h2>
         <div class="block_image">
           <p class="label">time management</p>
-          <img class="image filter_time-management" src="./images/time_management.jpg" alt="Человек, умеющий управлять своим временем"> 
+          <img class="image filter_time-management" src="./images/time_management.jpg" alt="Человек, умеющий управлять своим временем" loading=”lazy”> 
         </div>
         <div class="section__text">
           <p>
@@ -418,14 +426,15 @@
           </p>
         </div>
         <div class="like">
-          <button type="button" class="card__icon-button">
+          <button type="button" class="card__icon-button" aria-label="Поставить лайк через сердечко">
             <svg 
               xmlns="http://www.w3.org/2000/svg" 
-              width="27" 
-              height="24" 
+              width="39" 
+              height="36" 
               fill="none"
               class="like-icon"
-              viewBox="0 0 34 30">
+              viewBox="0 0 39 36"
+              aria-hidden="true">
               <g class="heart">
                 <path class="contour" fill="var(--heart-contour)" d="M12 6H9V9H12V6ZM15 6H12V9H15V6ZM9 9H6V12H9V9ZM9 12H6V15H9V12ZM9 
                 15H6V18H9V15ZM18 6H15V9H18V6ZM12 18H9V21H12V18ZM15 21H12V24H15V21ZM18 
@@ -446,18 +455,18 @@
                 0H15V3H12V0ZM0 13H3V16H0V13Z"/>
                 </svg>   
           </button>
-          <button type="button" class="card__like-button">
+          <button type="button" class="card__like-button" aria-label="Поставить лайк, нажав на кнопку">
             <span class="button__text">Like</span>
           </button>
         </div>
       </section>
       <section class="section">
-        <h2 class="section__tittle">
+        <h2 class="section__title">
           «Сейчас я здесь»
         </h2>
         <div class="block_image">
           <p class="label">Путь вперёд</p>
-          <img class="image filter_way" src="./images/way.jpg" alt="Путь в будущее"> 
+          <img class="image filter_way" src="./images/way.jpg" alt="Путь в будущее" loading=”lazy”> 
         </div>
         <div class="section__text">
           <p>
@@ -471,20 +480,21 @@
             познания. Ведь часто путь — и есть результат.
           </p>
           <p>Как сказал Георг Гегель:</p>
-          <blockquote class="quote">
+          <p>
               "Жизнь — это бесконечное совершенствование. 
               Считать себя совершенным — значит убить себя."
-          </blockquote>  
+          </p>  
         </div>
         <div class="like">
-          <button type="button" class="card__icon-button">
+          <button type="button" class="card__icon-button" aria-label="Поставить лайк через сердечко">
             <svg 
               xmlns="http://www.w3.org/2000/svg" 
-              width="27" 
-              height="24" 
+              width="39" 
+              height="36" 
               fill="none"
               class="like-icon"
-              viewBox="0 0 34 30">
+              viewBox="0 0 39 36"
+              aria-hidden="true">
               <g class="heart">
                 <path class="contour" fill="var(--heart-contour)" d="M12 6H9V9H12V6ZM15 6H12V9H15V6ZM9 9H6V12H9V9ZM9 12H6V15H9V12ZM9 
                 15H6V18H9V15ZM18 6H15V9H18V6ZM12 18H9V21H12V18ZM15 21H12V24H15V21ZM18 
@@ -505,23 +515,23 @@
                 0H15V3H12V0ZM0 13H3V16H0V13Z"/>
                 </svg>   
           </button>
-          <button type="button" class="card__like-button">
+          <button type="button" class="card__like-button" aria-label="Поставить лайк, нажав на кнопку">
             <span class="button__text">Like</span>
           </button>
         </div>
       </section>
     </main>
-    <footer class="footer"> <!--В макете указан, как footer-->
+    <div class="save"> 
       <button
         type="button" 
         onclick="window['dialog'].showModal()" 
         aria-controls="dialog"
-        class="card_zone footer__button"
+        class="card_zone save__button"
       >
-        <svg class="card__icon-button footer__icon-button" viewBox="0 0 40 40">
+        <svg class="card__icon-button save__icon-button" viewBox="0 0 40 40">
           <use href="svg/floppy.svg#floppy" />
         </svg>
-        <span class="button__text footer__text">Сохранить на память</span>
+        <span class="button__text save__text">Сохранить на память</span>
       </button>
       <dialog class="dialog" id="dialog" aria-label="Предупреждение о необходимости вставить дискету">
         <div class="dialog__massage">
@@ -535,11 +545,11 @@
           type="submit" 
           class="card__like-button dialog__button"
           onclick="window['dialog'].close()">
-            <span class="dialog__button__text">ок</span>
+            <span class="button__text dialog__button__text">ок</span>
           </button>
         </form>
       </dialog>
-    </footer>
+    </div>
     <script src="./scripts/like.js"></script>
   </body>
 </html>
