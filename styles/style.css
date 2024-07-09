@@ -156,7 +156,6 @@
 .section__text p {
   line-height: 117%;
   font-size: 18px;
-  padding-inline-end: 15px;
 }
 
 .like {
@@ -256,7 +255,8 @@
 }
 
 .save__icon-button {
-  inline-size: 28px;
+  inline-size: 29px;
+  block-size: 29px;
 }
 
 .save__text {
@@ -277,7 +277,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  inline-size: clamp(21.3125rem, 20.9604rem + 1.5023vw, 22.3125rem);/*341-357*/
+  inline-size: clamp(21.313rem, 1.502vw + 20.96rem, 22.313rem);/*341-357*/
   flex-direction: column;
   padding: 30px 40px;
   color: var(--accent-color);
@@ -293,7 +293,7 @@
 
 .dialog__massage {
   display: flex;
-  gap: 20px;
+  gap: 18px;
   align-items: center;
 }
 
@@ -328,12 +328,15 @@
 }
 
 @media (min-width: 1440px) {
-  .footer__button {
+  .save__button {
     flex-direction: row;
+    padding: 13px 15px;
+    gap: 9px;
   }
 
-  .footer__icon-button {
-    inline-size: 21px;
+  .save__icon-button {
+    inline-size: 25px;
+    block-size: 25px;
   }
 
   .dialog {
